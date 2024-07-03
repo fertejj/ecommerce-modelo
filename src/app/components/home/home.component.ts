@@ -17,5 +17,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.productoService.getProducto()
+    .subscribe({
+      next: (producto: any) => {
+        this.producto = producto
+        console.log(this.producto)
+      },
+      error: (err: any) => {
+        console.error('GET request error:', err);
+      },
+      complete: () => {
+        console.log('GET request completed');
+      },	
+    })
   }
 }
