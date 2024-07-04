@@ -17,6 +17,6 @@
     </h2>
     <p class="mt-1">ARS${{ producto?.discount_price || "0" }}</p>
     <del>ARS${{ producto?.price || "0"}}</del>
-    <span class="text-red-600 ml-3" >{{producto ? ((producto.price - producto.discount_price)/(producto.price) | percent) : null}}</span>
+    <span class="text-green-600 ml-3" >{{producto ? ((producto.price - producto.discount_price)/(producto.price) | percent) : null}}</span>
   </div>
 </div>
