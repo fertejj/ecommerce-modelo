@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Producto } from '../../models/producto.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.css'
 })

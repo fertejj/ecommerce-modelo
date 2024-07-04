@@ -1,10 +1,20 @@
-<div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-    <a class="block relative h-48 rounded overflow-hidden">
-      <img alt="ecommerce" class="object-cover object-center w-full h-full block" src={{producto?.imageURL}}>
-    </a>
-    <div class="mt-4">
-      <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{producto?.category}}</h3>
-      <h2 class="text-gray-900 title-font text-lg font-medium">{{producto?.name}}</h2>
-      <p class="mt-1">{{producto?.price}}</p>
-    </div>
+<div class="lg:w-4/4 md:w-2/2 p-4 w-full">
+  <a class="block relative h-48 rounded overflow-hidden">
+    <img
+      alt="ecommerce"
+      class="object-cover object-center w-full h-full block"
+      [src]="producto ? producto.imageURL[0] : ''"
+      [alt]="producto?.name"
+    />
+  </a>
+  <div class="mt-4">
+    <!--       <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{producto?.category}}</h3> -->
+    <h2 class="text-gray-900 title-font text-lg font-medium">
+      {{ producto?.name?.substring(0, 20) }}
+      {{ producto && producto.name[21] ? "..." : null }}
+    </h2>
+    <p class="mt-1">ARS${{ producto?.discount_price || "0" }}</p>
+    <del>ARS${{ producto?.price || "0"}}</del>
+    <span class="text-red-600 ml-3" >{{producto ? ((producto.price - producto.discount_price)/(producto.price) | percent) : null}}</span>
   </div>
+</div>
