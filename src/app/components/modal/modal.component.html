@@ -1,13 +1,18 @@
-<div class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+<div class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50 ">
     <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full">
         <div class="bg-blue-500 p-4">
-            <h2 class="text-xl font-bold text-white">Mi Carrito (3)</h2>
+            <h2 class="text-2xl font-bold text-white">Mi Carrito (3)</h2>
         </div>
+
+
+<!-- IF MODAL VACIO -->
         <div id="modal-content" class="p-4 flex flex-col items-center">
             <h2 class="text-3xl font-bold ">¡Ups!</h2>
-            <img class="w-[80%] my-8 pr-8 opacity-20" src="../../../assets/svg/empty-cart.svg" alt="Carrito vacío">
+            <img class="w-[80%] my-12 pr-10 opacity-20" src="../../../assets/svg/empty-cart.svg" alt="Carrito vacío">
             <p class="text-gray-700 text-lg text-center ">¡Tu carrito se encuentra vacío!</p>
         </div>
+
+<!-- BOTONES DE COMPRA -->
         <div class="p-4 flex justify-end">
             <button id="closeModalButton" (click)="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">
                 Continuar comprando
