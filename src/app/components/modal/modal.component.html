@@ -1,0 +1,18 @@
+<div class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all max-w-lg w-full">
+        <div class="bg-blue-500 p-4">
+            <h2 class="text-lg font-bold text-white">Título del Modal</h2>
+        </div>
+        <div class="p-4">
+            <p class="text-gray-700">Este es el contenido del modal.</p>
+        </div>
+        <div class="p-4 flex justify-end">
+            <button id="closeModalButton" (click)="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">
+                Cerrar
+            </button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                Terminar compra
+            </button>
+        </div>
+    </div>
+</div>
