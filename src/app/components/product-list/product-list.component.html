@@ -1,24 +1,22 @@
-<div class="flex center justify-center flex-wrap -m-4">
-  <app-product-item
-    *ngFor="let producto of producto"
-    [producto]="producto"
-  ></app-product-item>
+<h1 class="text-3xl font-bold text-center pt-6 pb-12">Explora nuestros productos</h1>
+<div class="flex center justify-center flex-wrap text-center">
+  <app-product-item *ngFor="let producto of producto" [producto]="producto"></app-product-item>
 </div>
 
 <div *ngIf="!producto.length">
   <div class="text-gray-600 body-font relative">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
-        <h1
-          class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
-        >
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
           ¡Ups! No existen productos.
         </h1>
         <p class="lg:w-2/3 mx-auto text-base">
-          La categoria o busqueda no genero resultados.
+          La categoría o búsqueda no genero resultados.
         </p>
       </div>
-      <button  routerLink="/" ng-reflect-router-link="/" href="/"  class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Volver a Inicio</button>
+      <button routerLink="/" ng-reflect-router-link="/" href="/"
+        class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Volver
+        a Inicio</button>
     </div>
   </div>
 </div>
